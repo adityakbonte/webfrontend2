@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="./signup.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #eee;
+    }
+
+    #box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .navbar-nav{
+      padding-right: 50px;
+    }
+    .navbar-brand{
+      padding-left: 40px;
+    }
+
+    #boxin {
+      width: 60%;
+      height: 80%;
+      position: relative;
+      overflow: hidden;
+      background-color: #fff;
+      border-radius: 25px;
+      box-shadow: 0 0 10px rgba(33, 27, 27, 0.3);
+    }
+
+    #closeButton {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+    }
+
+    .card-body {
+      padding: 3rem 2rem;
+    }
+
+    .form-check {
+      margin-top: 1rem;
+    }
+
+    .btn-register {
+      margin-top: 1rem;
+    }
+
+    .col-md-10 {
+      margin-bottom: 2rem;
+    }
+
+    .col-md-10 img {
+      width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
+      #boxin {
+        width: 80%;
+      }
+    }
+
+    .navbar{
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="navbar navbar-expand bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand"><span style="color: rgb(134, 232, 134)">ATG</span>.WORLD</a>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/login.html">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/signup.html">SignUp</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <section id="box">
+    
+    <div id="boxin" class="card text-black">
+      <span id="closeButton" onclick="closeBox()"><img width="30" height="30" src="https://img.icons8.com/ios/50/multiply.png" alt="multiply"/></span>
+      <div class="card-body">
+        
+        <div class="row justify-content-center">
+          <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+            <p class="text-center h4 fw-bold mb-3 mx-1 mx-md-4 mt-4">Sign up</p>
+            <form class="mx-1 mx-md-4">
+              <div class="d-flex flex-row align-items-center mb-3">
+                <i class="fas fa-user fa-lg me-2 fa-fw"></i>
+                <div class="form-outline flex-fill mb-0">
+                  <input type="text" id="form3Example1c" class="form-control form-control-sm" placeholder="Name" />
+                  <label class="form-label" for="form3Example1c">Your Name</label>
+                </div>
+              </div>
+
+              <div class="d-flex flex-row align-items-center mb-3">
+                <i class="fas fa-envelope fa-lg me-2 fa-fw"></i>
+                <div class="form-outline flex-fill mb-0">
+                  <input type="email" id="form3Example3c" class="form-control form-control-sm" placeholder="Email" />
+                  <label class="form-label" for="form3Example3c">Your Email</label>
+                </div>
+              </div>
+
+              <div class="d-flex flex-row align-items-center mb-3">
+                <i class="fas fa-lock fa-lg me-2 fa-fw"></i>
+                <div class="form-outline flex-fill mb-0">
+                  <input type="password" id="form3Example4c" class="form-control form-control-sm" placeholder="Password" />
+                  <label class="form-label" for="form3Example4c">Password</label>
+                </div>
+              </div>
+
+              <div class="d-flex flex-row align-items-center mb-3">
+                <i class="fas fa-key fa-lg me-2 fa-fw"></i>
+                <div class="form-outline flex-fill mb-0">
+                  <input type="password" id="form3Example4cd" class="form-control form-control-sm" placeholder="Repeat-Password" />
+                  <label class="form-label" for="form3Example4cd">Repeat your password</label>
+                </div>
+              </div>
+
+              <div class="form-check d-flex justify-content-center mb-3">
+                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
+                <label class="form-check-label" for="form2Example3">
+                  I agree all statements in <a href="#!">Terms of service</a>
+                </label>
+              </div>
+
+              <div class="d-flex justify-content-center mx-4 mb-3">
+                <button type="button" class="btn btn-primary btn-sm btn-register">Register</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+              class="img-fluid" alt="Sample image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function closeBox() {
+      document.getElementById("boxin").style.display = "none";
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
